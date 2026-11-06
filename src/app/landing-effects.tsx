@@ -6,6 +6,9 @@ const ATTRIBUTION_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_term"
 const COUNTDOWN_MS = 10 * 60 * 1000;
 const COUNTDOWN_KEY = "brl-offer-deadline:bordadorusso";
 
+// Mesma velocidade (px/s) do carrossel do hero da página 2: 8 cards de clamp(150px, 42vw, 230px) + 14px em 48s.
+const heroRailSpeed = () => (8 * (Math.min(230, Math.max(150, window.innerWidth * 0.42)) + 14)) / 48;
+
 /**
  * Comportamentos da página de referência: loop do carrossel do hero, revelar ao
  * rolar, cronômetro de 10 minutos (guardado na sessão), UTMs repassadas para o
@@ -28,6 +31,9 @@ export default function LandingEffects() {
           if (groups.length !== 2) return;
           const distance =
             Math.round((groups[1].getBoundingClientRect().left - groups[0].getBoundingClientRect().left) * 1000) / 1000;
+          if (distance) {
+            heroRail.style.setProperty("animation-duration", `${(distance / heroRailSpeed()).toFixed(2)}s`, "important");
+          }
           if (!distance || Number(heroRail.dataset.brlLoopDistance) === distance) {
             heroRail.classList.add("is-ready");
             return;
