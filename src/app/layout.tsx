@@ -3,9 +3,9 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Guía para aprender bordado ruso desde cero | Mariana Robles",
+  title: "Curso de Bordado Ruso en videoclases, desde cero | Mariana Robles",
   description:
-    "Aprendé Bordado Ruso desde cero con videos paso a paso y más de 100 moldes listos para usar. Empezá sin experiencia, sin saber dibujar y sin materiales caros.",
+    "Aprendé Bordado Ruso con videoclases paso a paso, desde cero hasta avanzado, y más de 100 moldes listos para usar. Empezá sin experiencia, sin saber dibujar y sin materiales caros.",
 };
 
 export const viewport: Viewport = {

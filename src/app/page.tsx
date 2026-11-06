@@ -4,11 +4,11 @@ import LandingEffects from "./landing-effects";
 // TODO(Luan): link de checkout desta página ainda não enviado. Enquanto isso os botões levam ao bloco da oferta.
 const CHECKOUT = "#brl-buy";
 
-const PRICE = "$18.900";
-const OLD_PRICE = "$37.800";
-const INSTALLMENT = "$6.300";
-const SAVINGS = "$67.400";
-const TOTAL_VALUE = "$86.300";
+// Preços no formato "10$" (sem separador de milhar, para não parecer mil).
+const PRICE = "10$";
+const OLD_PRICE = "20$";
+const SAVINGS = "137,50$";
+const TOTAL_VALUE = "147,50$";
 
 const HERO_RESULTS = [
   { src: "/assets/hero-1.jpg", alt: "Cuadro con textura y relieve", h: 650 },
@@ -52,8 +52,8 @@ const PROOFS = [
 const INCLUDES = [
   {
     icon: "🎥",
-    title: "Videos claros paso a paso",
-    text: "Seguí cada técnica en orden, desde la primera puntada hasta la terminación.",
+    title: "Videoclases completas paso a paso",
+    text: "Desde cero hasta avanzado: seguí cada técnica en video, en orden, desde la primera puntada hasta la terminación.",
   },
   {
     icon: "🧶",
@@ -78,54 +78,54 @@ const BONUSES = [
     h: 1133,
     title: "+100 Moldes Creativos Listos para Imprimir",
     text: "Diseños listos para imprimir y transferir.",
-    value: "$9.900",
+    value: "37,90$",
   },
   {
     img: "/assets/bono-2.png",
     h: 1133,
     title: "Guía paso a paso para conseguir los materiales economicos",
     text: "Qué comprar y dónde conseguirlo sin gastar de más.",
-    value: "$8.900",
+    value: "24,90$",
   },
   {
     img: "/assets/bono-3.png",
     h: 1133,
     title: "+10 Tutoriales paso a paso con ideas para crear y vender",
     text: "Tutoriales con nuevas ideas para crear, regalar o vender.",
-    value: "$12.900",
+    value: "29,90$",
   },
   {
     img: "/assets/bono-4.png",
     h: 1133,
     title: "Excel de Costos | Calcula a que precio vender",
     text: "Para saber cuánto cobrar si decidís vender.",
-    value: "$6.900",
+    value: "19,90$",
   },
   {
     img: "/assets/bono-5.jpg",
     h: 1275,
-    title: "Certificado de finalización de la Guía de Bordado Ruso",
-    text: "Recibí tu certificado al completar la formación y reconocé todo lo que aprendiste.",
-    value: "$9.900",
+    title: "Certificado de finalización del Curso de Bordado Ruso",
+    text: "Recibí tu certificado al completar el curso y reconocé todo lo que aprendiste.",
+    value: "14,90$",
   },
 ];
 
 const FAQ = [
   {
     q: "¿Necesito experiencia para empezar?",
-    a: "No. El método fue pensado para principiantes y explica la técnica desde cero.",
+    a: "No. El curso fue pensado para principiantes: son videoclases paso a paso que explican la técnica desde cero hasta el nivel avanzado.",
   },
   {
     q: "¿Los materiales son difíciles de conseguir?",
-    a: "No. La herramienta especial para bordado ruso y el resto de los materiales son económicos y fáciles de conseguir. Dentro del método vas a encontrar una guía simple para saber qué comprar sin gastar de más.",
+    a: "No. La herramienta especial para bordado ruso y el resto de los materiales son económicos y fáciles de conseguir. Dentro del curso vas a encontrar una guía simple para saber qué comprar sin gastar de más.",
   },
   {
     q: "¿Es un producto físico?",
-    a: "No. Es un producto digital y recibís el acceso después de confirmarse el pago.",
+    a: "No. Es un curso digital en videoclases y recibís el acceso después de confirmarse el pago.",
   },
   {
     q: "¿Puedo verlo desde el celular?",
-    a: "Sí. Podés acceder desde el celular, una tablet o la computadora.",
+    a: "Sí. Podés ver las videoclases desde el celular, una tablet o la computadora.",
   },
   {
     q: "¿Puedo vender las piezas que haga?",
@@ -208,7 +208,7 @@ export default function Home() {
               <div className="brl__lead rte">
                 <p>
                   Creá piezas con <strong>terminaciones profesionales y listas para vender</strong>, siguiendo{" "}
-                  <strong>videos paso a paso</strong> y más de <strong>100 moldes listos para usar</strong>. Empezá sin
+                  <strong>videoclases paso a paso, completas desde cero hasta avanzado,</strong> y más de <strong>100 moldes listos para usar</strong>. Empezá sin
                   experiencia, sin saber dibujar y sin necesitar materiales caros.
                 </p>
               </div>
@@ -244,7 +244,7 @@ export default function Home() {
               <h2>
                 ¿Te sentís <em>identificado?</em>
               </h2>
-              <p>Si alguna de estas situaciones te resulta familiar, esta guía es para vos.</p>
+              <p>Si alguna de estas situaciones te resulta familiar, este curso es para vos.</p>
             </div>
             <div className="brl__identified-grid">
               {IDENTIFIED.map((item) => (
@@ -333,7 +333,7 @@ export default function Home() {
               </h2>
               <div className="rte">
                 <p>
-                  Cuando empecé, no encontraba una guía que reuniera en un solo lugar los materiales correctos, la técnica y
+                  Cuando empecé, no encontraba un curso que reuniera en un solo lugar los materiales correctos, la técnica y
                   las terminaciones. El Bordado Ruso es sencillo, pero sin una explicación clara puede parecer mucho más
                   difícil de lo que realmente es.
                 </p>
@@ -385,13 +385,13 @@ export default function Home() {
                 <strong>4,9/5 · +890 alumnas</strong>
               </div>
               <Countdown as="div" className="brl__offer-timer brl__offer-timer--inline" label={<span>Oferta reservada por</span>} />
-              <h2 className="brl__offer-product-title">Guía para aprender bordado ruso desde cero | Mariana Robles</h2>
+              <h2 className="brl__offer-product-title">Curso de Bordado Ruso en videoclases, desde cero | Mariana Robles</h2>
               <div className="brl__offer-price-row">
                 <s>{OLD_PRICE}</s>
                 <strong>{PRICE}</strong>
               </div>
               <div className="brl__offer-lines">
-                <OfferLine label="Videos Prácticos paso a paso">INCLUIDAS</OfferLine>
+                <OfferLine label="Videoclases prácticas paso a paso, desde cero hasta avanzado">INCLUIDAS</OfferLine>
                 <OfferLine label="Soporte por WhatsApp con Mariana para resolver tus dudas">INCLUIDO</OfferLine>
                 {BONUSES.map((bonus, i) => (
                   <OfferLine key={bonus.title} label={`Bono #${i + 1}: ${bonus.title}`}>
@@ -418,9 +418,6 @@ export default function Home() {
                   <small>Acceso inmediato · 14 días de garantía</small>
                 </a>
               </div>
-              <p className="brl__offer-installments brl__offer-installments--below">
-                3 cuotas sin interés de <strong>{INSTALLMENT}</strong>
-              </p>
             </div>
           </div>
         </div>
@@ -451,7 +448,7 @@ export default function Home() {
                   <strong>{OLD_PRICE}</strong>
                 </div>
                 <div>
-                  <span>▶ Videoclases prácticas paso a paso</span>
+                  <span>▶ Videoclases paso a paso, desde cero hasta avanzado</span>
                   <strong>INCLUIDAS</strong>
                 </div>
                 {BONUSES.slice(0, 4).map((bonus) => (
@@ -486,7 +483,7 @@ export default function Home() {
                 <span>QUIERO ACCEDER AHORA</span>
                 <span aria-hidden="true">→</span>
               </a>
-              <p>El acceso incluye la guia completa y 5 bonos.</p>
+              <p>El acceso incluye el curso completo en videoclases y 5 bonos.</p>
             </div>
           </div>
         </div>
@@ -520,17 +517,13 @@ export default function Home() {
           <h2>
             Aprovechá el 50% OFF y <em>empezá hoy</em>
           </h2>
-          <p>Creá para vos, para regalar o para empezar a vender desde casa.</p>
+          <p>Aprendé con videoclases paso a paso, desde cero hasta avanzado, y creá para vos, para regalar o para empezar a vender desde casa.</p>
           {/* Os espaços entre o selo e o mockup reproduzem a linha da referência (os dois são inline). */}
           <div className="brl__final-promo">SOLO HOY: LOS 5 BONOS VAN GRATIS</div>{" "}
-          <img src="/assets/mockup.jpg" alt="Curso Digital de Bordado Ruso desde Cero" width={900} height={675} loading="lazy" className="brl__final-image" />{" "}
+          <img src="/assets/mockup.jpg" alt="Curso de Bordado Ruso en videoclases" width={900} height={675} loading="lazy" className="brl__final-image" />{" "}
           <div className="brl__price brl__price--center">
             <span className="brl__price-compare">{OLD_PRICE}</span>
             <strong>{PRICE}</strong>
-            <small className="brl__installments">
-              <span>3 cuotas sin interés de</span>
-              <strong>{INSTALLMENT}</strong>
-            </small>
           </div>
           <a className="brl__button brl__button--primary" href={CHECKOUT} data-brl-checkout-link>
             <span>QUIERO ACCEDER CON 50% OFF</span>
