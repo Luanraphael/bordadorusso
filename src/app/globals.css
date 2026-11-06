@@ -3421,3 +3421,10 @@ h3 {
     animation-duration: 15s !important;
   }
 }
+
+/* Foto recortada (PNG sem fundo) da Juliana: inteira, apoiada na base, sobre o rosado. */
+#brl .brl__creator-image--cutout {
+  background: linear-gradient(180deg, var(--brl-surface-rose), var(--brl-cream));
+  object-fit: contain;
+  object-position: center bottom;
+}

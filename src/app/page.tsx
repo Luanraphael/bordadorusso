@@ -1,8 +1,7 @@
 import type { ReactNode } from "react";
 import LandingEffects from "./landing-effects";
 
-// TODO(Luan): link de checkout desta página ainda não enviado. Enquanto isso os botões levam ao bloco da oferta.
-const CHECKOUT = "#brl-buy";
+const CHECKOUT = "https://pay.hotmart.com/X108375866D?checkoutMode=10";
 
 // Preços no formato "10$" (sem separador de milhar, para não parecer mil).
 const PRICE = "10$";
@@ -190,10 +189,10 @@ export default function Home() {
           <div className="brl__wrap brl__hero-inner">
             <div className="brl__hero-copy">
               <div className="brl__hero-author">
-                <img src="/assets/mariana.jpg" alt="Mariana Robles" width={120} height={120} loading="eager" className="brl__hero-author-image" />
+                <img src="/assets/juliana-avatar.jpg" alt="Juliana Duarte" width={120} height={120} loading="eager" className="brl__hero-author-image" />
                 <span className="brl__hero-author-copy">
                   <small>MÉTODO CREADO Y ENSEÑADO POR</small>
-                  <strong>Mariana Robles</strong>
+                  <strong>Juliana Duarte</strong>
                   <em>Especialista en Bordado Ruso</em>
                 </span>
               </div>
@@ -324,10 +323,17 @@ export default function Home() {
         <div className="brl__creator brl__section">
           <div className="brl__wrap brl__creator-card brl__reveal">
             <div className="brl__creator-media">
-              <img src="/assets/mariana.jpg" alt="Mariana Robles" width={1000} height={1000} loading="lazy" className="brl__creator-image" />
+              <img
+                src="/assets/juliana.png"
+                alt="Juliana Duarte"
+                width={900}
+                height={1125}
+                loading="lazy"
+                className="brl__creator-image brl__creator-image--cutout"
+              />
             </div>
             <div className="brl__creator-copy">
-              <div className="brl__kicker">UN MENSAJE DE MARIANA</div>
+              <div className="brl__kicker">UN MENSAJE DE JULIANA</div>
               <h2>
                 Creé este método para que <em>empezar te resulte simple</em>
               </h2>
@@ -343,7 +349,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="brl__signature">
-                <strong>Mariana Robles</strong>
+                <strong>Juliana Duarte</strong>
                 <span>Profesora de bordado ruso y creadora del método</span>
               </div>
             </div>
@@ -385,14 +391,14 @@ export default function Home() {
                 <strong>4,9/5 · +890 alumnas</strong>
               </div>
               <Countdown as="div" className="brl__offer-timer brl__offer-timer--inline" label={<span>Oferta reservada por</span>} />
-              <h2 className="brl__offer-product-title">Curso de Bordado Ruso en videoclases, desde cero | Mariana Robles</h2>
+              <h2 className="brl__offer-product-title">Curso de Bordado Ruso en videoclases, desde cero | Juliana Duarte</h2>
               <div className="brl__offer-price-row">
                 <s>{OLD_PRICE}</s>
                 <strong>{PRICE}</strong>
               </div>
               <div className="brl__offer-lines">
                 <OfferLine label="Videoclases prácticas paso a paso, desde cero hasta avanzado">INCLUIDAS</OfferLine>
-                <OfferLine label="Soporte por WhatsApp con Mariana para resolver tus dudas">INCLUIDO</OfferLine>
+                <OfferLine label="Soporte por WhatsApp con Juliana para resolver tus dudas">INCLUIDO</OfferLine>
                 {BONUSES.map((bonus, i) => (
                   <OfferLine key={bonus.title} label={`Bono #${i + 1}: ${bonus.title}`}>
                     <s>{bonus.value}</s>
@@ -419,19 +425,6 @@ export default function Home() {
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className="brl__guarantee-banner brl__section" aria-label="Garantía y seguridad de compra">
-          <div className="brl__wrap brl__guarantee-banner-wrap brl__reveal">
-            <img
-              src="/assets/garantia.jpg"
-              alt="14 días de garantía y pago seguro con Mercado Pago"
-              width={1800}
-              height={390}
-              loading="lazy"
-              className="brl__guarantee-banner-image"
-            />
           </div>
         </div>
 
@@ -466,7 +459,7 @@ export default function Home() {
                   </strong>
                 </div>
                 <div className="brl__value-support">
-                  <span>💬 Soporte por WhatsApp con Mariana</span>
+                  <span>💬 Soporte por WhatsApp con Juliana</span>
                   <strong>INCLUIDO</strong>
                 </div>
               </div>
